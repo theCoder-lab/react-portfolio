@@ -30,7 +30,7 @@ useEffect(()=>{
 
     $(window).on('scroll', function(){
 
-        let sectionOffset = $("#section-offset").offset().top;
+        /* let sectionOffset = $("#section-offset").offset().top; */
         let scrollPosition = $(window).scrollTop();
 
         if(scrollPosition > 100){

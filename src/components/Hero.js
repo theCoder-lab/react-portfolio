@@ -12,7 +12,7 @@ function Hero() {
                     Let's turn your idea into real world project.
                     Clean code, heigh performance and quality are garantied.
                 </p>   
-                <a data-aos="zoom-in-up" data-aos-delay="1000" href="#">Get In Touch</a>
+                <a data-aos="zoom-in-up" data-aos-delay="1000" href="#contact">Get In Touch</a>
             </div>
         </div>
     </header>

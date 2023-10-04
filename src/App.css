@@ -253,7 +253,7 @@ nav .container .box a:not(:last-child){
     display: none;
 }
 
-nav .container .box a:last-child{
+nav .container .box > button{
     width: 30px;
     height: 26px;
     display: block;
@@ -497,7 +497,7 @@ header .container img{
     flex-direction: column;
 }
 
-.projects .container .box a img{
+.projects .container .box > img{
     width: 100%;
     height: 250px;
     object-fit: cover;

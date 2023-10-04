@@ -38,9 +38,9 @@ function Navbar() {
                 <a href="#skills">Skills</a>   
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a> 
-                <a id="menu-toggle">
-                <div className="line"></div>
-                </a>
+                <p id="menu-toggle">
+                <button type='submit' className="line"></button>
+                </p>
             </div>
             </div>
         </nav>
