@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import $ from 'jquery';
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDatabase, FaReact } from "react-icons/fa6";
 
 
 function Skills() {
+
+    useEffect(()=>{
+    
+        let section = $('.skills');
+        let spans = $('.progress span');
+    
+    
+        $(window).on('scroll', function(){
+    
+    
+            // Progress function
+            if ($(window).scrollTop() >= section.offset().top) {
+                spans.each(function() {
+                $(this).css('width', $(this).data('width'));
+                });
+            }
+    
+ 
+        });
+    
+    
+    },[]);
+
   return (
     <>
         <section className="skills" id="skills">

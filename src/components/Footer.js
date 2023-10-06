@@ -1,11 +1,32 @@
 import React from 'react'
-import { useEffect } from 'react';
-import $ from 'jquery';
+import { useEffect, useState } from 'react';
+/* import $ from 'jquery'; */
 import { FaRegCircleUp } from "react-icons/fa6";
 
 function Footer() {
 
+const [showUpBtn, setShowUpBtn] = useState(false);
+
 useEffect(()=>{
+
+    const triggerGoupBtn = () => {
+        
+        if(window.scrollY >= 800){
+            setShowUpBtn(true);
+        } else{
+            setShowUpBtn(false);
+        }
+    }
+
+    window.addEventListener('scroll', triggerGoupBtn);
+
+    return ()=>{
+        window.removeEventListener('scroll', triggerGoupBtn);
+    }
+
+}, []);
+
+/* useEffect(()=>{
 
     let nums = $('.box .num');
     let aboutSection = $('.about');
@@ -30,19 +51,6 @@ useEffect(()=>{
 
     $(window).on('scroll', function(){
 
-        /* let sectionOffset = $("#section-offset").offset().top; */
-        let scrollPosition = $(window).scrollTop();
-
-        if(scrollPosition > 100){
-            $('nav').css({ background: 'var(--section-gray)', opacity: '0.8',backdropFilter: 'blur(10px)'});
-            $('#goUp').fadeIn(1000);
-           
-        }else{
-            $('nav').css({background: 'var(--section-gray)', opacity: '1'});
-            $('#goUp').fadeOut(1000);
-            
-        }
-
 
         // Progress function
         if ($(window).scrollTop() >= section.offset().top) {
@@ -63,7 +71,7 @@ useEffect(()=>{
     });
 
 
-},[]);
+},[]); */
 
 return (
     <>
@@ -76,7 +84,7 @@ return (
             </div>
         </div>
     </footer>
-    <a id="goUp" href="#top" className="goUp">
+    <a id="goUp" href="#top" className={`goUp ${showUpBtn ? 'show': ''}`}>
         <FaRegCircleUp className='goUp-icon' />
     </a>
     <div id="modeBtn" className="modeBtn"></div>  

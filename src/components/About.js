@@ -1,8 +1,49 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import $ from 'jquery';
 import { VscCode, VscGlobe, VscTools, VscAccount } from "react-icons/vsc";
 
 
 function About() {
+
+    useEffect(()=>{
+
+
+        
+        let nums = $('.box .num');
+        let aboutSection = $('.about');
+        let started = false;
+    
+        // Count function
+        function startCount(el) {
+            let goal = el.data('goal');
+            let count = setInterval(function() {
+              let currentValue = parseInt(el.text());
+              if (currentValue < goal) {
+                el.text(currentValue + 1);
+              } else {
+                clearInterval(count);
+              }
+            }, 2000 / goal);
+          }
+          
+    
+        $(window).on('scroll', function(){
+
+    
+            // Count implementation
+            if ($(window).scrollTop() >= aboutSection.offset().top + 400) {
+                if (!started) {
+                nums.each(function() {
+                    startCount($(this));
+                });
+                }
+                started = true;
+            }
+        });
+    
+    
+    },[]);
+
   return (
     <>
         <section className="about" id="about">
