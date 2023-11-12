@@ -560,6 +560,23 @@ header .container img{
     background-color: var(--hover-color);
 }
 
+.loadMorebtn{
+    width: 200px;
+    border-radius: var(--border-radius);
+    background-color: #d4d4d4;
+    color: #333;
+    margin-top: 20px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loadMorebtn:hover{
+    background-color: #cecece;
+}
+
 /* End Projects */
 
 
