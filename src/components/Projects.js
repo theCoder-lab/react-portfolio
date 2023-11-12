@@ -16,10 +16,10 @@ function Projects() {
   }, []);
 
 
-  const [itemsID, setItemsID] = useState(3);
+  const [itemsID, setItemsID] = useState(2);
 
   const handleLoadMore = () => {
-    setItemsID(prevItemsID => prevItemsID + 4);
+    setItemsID(prevItemsID => prevItemsID + 2);
   };
 
   return (
@@ -50,14 +50,14 @@ function Projects() {
             );
           })}
 
-              <div className='loadMore-div'>
+              
+        </div>
+        <div className='loadMore-div'>
                 { 
                     itemsID > dataList.length ? (<button className="loadMorebtn" disabled>No more results</button>) : 
                     (<button className="loadMorebtn" onClick={handleLoadMore}>Load More</button>) 
                 }
-              </div> 
-              
-        </div>
+        </div> 
       </section>
     </>
   );

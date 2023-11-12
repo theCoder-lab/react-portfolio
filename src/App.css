@@ -560,21 +560,30 @@ header .container img{
     background-color: var(--hover-color);
 }
 
+.loadMore-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 50px;
+}
+
 .loadMorebtn{
     width: 200px;
+    font-size: 1.2rem;
     border-radius: var(--border-radius);
-    background-color: #d4d4d4;
-    color: #333;
-    margin-top: 20px;
+    background-color: #efefef;
+    color: #555;
     padding: 15px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: var(--main-transition);
 }
 
 .loadMorebtn:hover{
-    background-color: #cecece;
+    background-color: #dbdbdb;
 }
 
 /* End Projects */
@@ -935,6 +944,7 @@ footer .container .box p{
         width: 96%;
         height: auto;
     }
+
 
 }
 
